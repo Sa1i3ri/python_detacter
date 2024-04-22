@@ -1,0 +1,15 @@
+datetime                            2013-12-16 20:22:37-01:00
+commit               0048c98fef96fa5df30db535bc124ee9aac341b0
+repo                                                  cpython
+filepath                                       Lib\pathlib.py
+content     @@ -1101,7 +1101,7 @@ def mkdir(self, mode=0o7...
+methods                                               [mkdir]
+lines                                                  [1104]@@ -1101,7 +1101,7 @@ def mkdir(self, mode=0o777, parents=False):
+             except OSError as e:
+                 if e.errno != ENOENT:
+                     raise
+-                self.parent.mkdir(mode, True)
++                self.parent.mkdir(parents=True)
+                 self._accessor.mkdir(self, mode)
+ 
+     def chmod(self, mode):

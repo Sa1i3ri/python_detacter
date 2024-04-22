@@ -1,0 +1,16 @@
+datetime                            2020-04-14 15:08:17-01:00
+commit               02cf895983d9050af0a38cfe685c66e56478fbae
+repo                                                   redash
+filepath                    redash\handlers\authentication.py
+content     @@ -285,6 +285,9 @@ def client_config():\n    ...
+methods                                       [client_config]
+lines                                         [288, 289, 290]@@ -285,6 +285,9 @@ def client_config():
+         "showPermissionsControl": current_org.get_setting(
+             "feature_show_permissions_control"
+         ),
++        "hidePlotlyModeBar": current_org.get_setting(
++            "hide_plotly_mode_bar"
++        ),
+         "allowCustomJSVisualizations": settings.FEATURE_ALLOW_CUSTOM_JS_VISUALIZATIONS,
+         "autoPublishNamedQueries": settings.FEATURE_AUTO_PUBLISH_NAMED_QUERIES,
+         "extendedAlertOptions": settings.FEATURE_EXTENDED_ALERT_OPTIONS,

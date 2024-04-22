@@ -9,8 +9,11 @@ val = pd.read_parquet('defectors\jit_bug_prediction_splits\\random\\train.parque
 output_folder = 'dataSet'
 os.makedirs(output_folder, exist_ok=True)
 
+start = 10
+num = 10
+
 # 遍历数据并写入单独的文件
-for index in range(0,10):
+for index in range(start,start+num):
     row = train.iloc[index]
     # 生成文件名，这里可以根据需要自定义文件名格式
     filename = os.path.join(output_folder, f'train_{index}.txt')

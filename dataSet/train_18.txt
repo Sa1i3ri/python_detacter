@@ -1,0 +1,27 @@
+datetime                            2020-02-28 04:41:46-01:00
+commit               000ae3e5bde61b472b052019af5484330d50b6f5
+repo                                                   sentry
+filepath                   src\sentry_plugins\slack\client.py
+content     @@ -0,0 +1,20 @@\n+from __future__ import abso...
+methods                                   [__init__, request]
+lines       [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14...@@ -0,0 +1,20 @@
++from __future__ import absolute_import
++
++from sentry_plugins.client import ApiClient
++
++
++class SlackApiClient(ApiClient):
++    plugin_name = "slack"
++    allow_redirects = False
++
++    def __init__(self, webhook, username, icon_url, channel):
++        self.webhook = webhook
++        self.username = username
++        self.icon_url = icon_url
++        self.channel = channel
++        super(SlackApiClient, self).__init__()
++
++    def request(self, data):
++        return self._request(
++            path=self.webhook, method="post", data=data, json=False, allow_text=True
++        )
