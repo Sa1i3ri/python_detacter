@@ -1,0 +1,27 @@
+datetime                            2014-07-16 03:51:12-01:00
+commit               0786e84a33155ebc8d8d3502e3a7f3060b86a4ec
+repo                                                   scrapy
+filepath                     scrapy\contrib\pipeline\files.py
+content     @@ -11,6 +11,11 @@ from six.moves.urllib.parse...
+methods                                     [file_downloaded]
+lines                               [14, 15, 16, 17, 18, 264]@@ -11,6 +11,11 @@ from six.moves.urllib.parse import urlparse
+ from collections import defaultdict
+ import six
+ 
++try:
++    from cStringIO import StringIO as BytesIO
++except ImportError:
++    from io import BytesIO
++
+ from twisted.internet import defer, threads
+ 
+ from scrapy import log
+@@ -256,7 +261,7 @@ class FilesPipeline(MediaPipeline):
+ 
+     def file_downloaded(self, response, request, info):
+         path = self.file_path(request, response=response, info=info)
+-        buf = six.BytesIO(response.body)
++        buf = BytesIO(response.body)
+         self.store.persist_file(path, buf, info)
+         checksum = md5sum(buf)
+         return checksum

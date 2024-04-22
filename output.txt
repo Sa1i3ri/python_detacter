@@ -1,0 +1,14 @@
+There is a bug in the `add_categories` method of the `SchemaGenerator` class. The bug is in the `get_category` method where it is not correctly determining the category for each endpoint based on the paths and categories.
+
+To fix this bug, you can modify the `get_category` method as follows:
+
+```python
+def get_category(self, categories, path):
+    path_components = path.split("{")[0].strip('/').split('/')
+    for path_component in path_components:
+        if path_component in categories:
+            return path_component
+    return None
+```
+
+This modification ensures that the correct category is determined for each endpoint based on the paths and categories.

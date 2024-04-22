@@ -1,0 +1,18 @@
+datetime                            2021-06-08 09:46:09-01:00
+commit               00e7e12a3a412ea386806d5d4eeaed345e912940
+repo                                                    black
+filepath                                 src\black\linegen.py
+content     @@ -226,8 +226,9 @@ class LineGenerator(Visito...
+methods                                        [visit_STRING]
+lines                                         [229, 230, 231]@@ -226,8 +226,9 @@ class LineGenerator(Visitor[Line]):
+         if is_docstring(leaf) and "\\\n" not in leaf.value:
+             # We're ignoring docstrings with backslash newline escapes because changing
+             # indentation of those changes the AST representation of the code.
+-            prefix = get_string_prefix(leaf.value)
+-            docstring = leaf.value[len(prefix) :]  # Remove the prefix
++            docstring = normalize_string_prefix(leaf.value, self.remove_u_prefix)
++            prefix = get_string_prefix(docstring)
++            docstring = docstring[len(prefix) :]  # Remove the prefix
+             quote_char = docstring[0]
+             # A natural way to remove the outer quotes is to do:
+             #   docstring = docstring.strip(quote_char)
