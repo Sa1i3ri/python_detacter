@@ -6,6 +6,8 @@ content     b'"""\nGeneralized Linear models.\n"""\n\n# Au...
 methods                [_preprocess_data, _rescale_data, fit]
 lines       [37, 185, 410, 419, 422, 473, 476, 479, 494, 4...
 
+37 185 410 419 422 473 476 479 494 495 496 
+
 """
 Generalized Linear models.
 """

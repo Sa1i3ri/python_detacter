@@ -6,6 +6,8 @@ content     b'import re\nfrom typing import List\n\nimport...
 methods     [lreshape, wide_to_long.get_var_names, wide_to...
 lines       [2, 14, 25, 31, 39, 124, 134, 135, 195, 419, 426]
 
+2 14 25 31 39 124 134 135 195 419 426 
+
 import re
 from typing import List
 

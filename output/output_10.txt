@@ -1,0 +1,1 @@
+Could you specify what kind of bugs you're concerned about¡ªsyntax errors, logical errors, or runtime exceptions? This will help me delve into the code effectively.

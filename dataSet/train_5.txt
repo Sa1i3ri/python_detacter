@@ -6,6 +6,8 @@ content     b'#!/usr/bin/python\n# -*- coding: utf-8 -*-\n...
 methods           [getvm, deploy_vm, _build_folder_map, main]
 lines          [535, 603, 1199, 1670, 1671, 1672, 1673, 1674]
 
+535 603 1199 1670 1671 1672 1673 1674 
+
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #

@@ -6,6 +6,8 @@ content     b'# Copyright The PyTorch Lightning team.\n#\n...
 methods     [__init__, add_lightning_class_args, add_light...
 lines          [16, 36, 51, 55, 58, 63, 67, 68, 69, 241, 242]
 
+16 36 51 55 58 63 67 68 69 241 242 
+
 # Copyright The PyTorch Lightning team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

@@ -6,6 +6,8 @@ content     b'# YOLOv5 \xf0\x9f\x9a\x80 by Ultralytics, GP...
 methods                                                    []
 lines                                            [28, 29, 30]
 
+28 29 30 
+
 # YOLOv5 🚀 by Ultralytics, GPL-3.0 license
 """
 Run inference on images, videos, directories, streams, etc.

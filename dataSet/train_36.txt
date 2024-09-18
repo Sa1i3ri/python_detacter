@@ -6,6 +6,8 @@ content     b'from cleo import option\n\nfrom .env_command...
 methods                                              [handle]
 lines                                                    [71]
 
+71 
+
 from cleo import option
 
 from .env_command import EnvCommand

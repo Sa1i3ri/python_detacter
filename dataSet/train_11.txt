@@ -6,6 +6,8 @@ content     b'#\n# Licensed to the Apache Software Foundat...
 methods                                      [get_connection]
 lines        [69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80]
 
+69 70 71 72 73 74 75 76 77 78 79 80 
+
 #
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file

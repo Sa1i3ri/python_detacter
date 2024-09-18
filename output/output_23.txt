@@ -1,0 +1,35 @@
+Based on the provided code, here are several potential issues and bugs along with their respective line numbers:
+
+1. **Line 42**: The variable `task_id` is used but not defined in the method `_restore_taskset`. This will raise a `NameError` when this method is called.
+
+   **Fix**: Replace `task_id` with `taskset_id` in the filter condition.
+
+   ```python
+   for taskset in qs.filter(TaskSet.task_id == taskset_id):
+   ```
+
+2. **Line 54**: The filter condition `Task.date_done < (datetime.now() - expires)` assumes `expires` is a `timedelta`. If `conf.TASK_RESULT_EXPIRES` is not set properly, this might lead to an incorrect comparison or type error. Ensure that `expires` is a `timedelta`.
+
+   **Fix**: Ensure `conf.TASK_RESULT_EXPIRES` is a `timedelta`. If it¡¯s not, convert it accordingly.
+
+3. **Lines 41 and 51**: The logic in `_get_task_meta_for` and `_restore_taskset` might create a new `Task` or `TaskSet` unnecessarily. If the goal is just to retrieve existing metadata, the creation logic should be revised.
+
+   **Fix**: You might want to return `None` or raise an exception instead of creating a new `Task` if none is found.
+
+4. **Line 28**: In the `_store_result` method, if the `task` already exists and you're updating its result, you might want to check if the `status` has changed before updating, to avoid unnecessary writes.
+
+   **Suggestion**: Consider checking if `task.result`, `task.status`, and `task.traceback` are different from the new values before updating them.
+
+5. **Line 66**: The `cleanup` method deletes expired tasks, but it does not handle the scenario where the session might fail to commit. An exception handling mechanism should be implemented to catch any potential issues during deletion.
+
+   **Fix**: Implement error handling within the `cleanup` method.
+
+Here¡¯s a summary of buggy lines:
+
+- **Line 42**: Using undefined variable `task_id`
+- **Line 54**: Possible type issue with `conf.TASK_RESULT_EXPIRES`
+- **Lines 41 and 51**: Logic that creates new tasks unnecessarily
+- **Line 28**: Potential unnecessary writes when updating existing tasks
+- **Line 66**: Lack of error handling during cleanup
+
+These changes should help improve the robustness of the code.

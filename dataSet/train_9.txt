@@ -6,6 +6,8 @@ content     b'# Copyright 2020 The HuggingFace Team, the A...
 methods                                                    []
 lines                                              [251, 252]
 
+251 252 
+
 # Copyright 2020 The HuggingFace Team, the AllenNLP library authors. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

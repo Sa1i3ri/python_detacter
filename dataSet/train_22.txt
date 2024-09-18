@@ -6,6 +6,8 @@ content     b'"""Handle the frontend for Home Assistant.""...
 methods                                         [async_setup]
 lines                                              [367, 368]
 
+367 368 
+
 """Handle the frontend for Home Assistant."""
 from __future__ import annotations
 

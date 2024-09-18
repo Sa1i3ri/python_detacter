@@ -6,6 +6,8 @@ content     b'"""\nGenerating lines of code.\n"""\nfrom fu...
 methods                                        [visit_STRING]
 lines                                         [229, 230, 231]
 
+229 230 231 
+
 """
 Generating lines of code.
 """

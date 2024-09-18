@@ -6,6 +6,8 @@ content     b'import logging\n\nfrom flask import abort, f...
 methods                                       [client_config]
 lines                                         [288, 289, 290]
 
+288 289 290 
+
 import logging
 
 from flask import abort, flash, redirect, render_template, request, url_for

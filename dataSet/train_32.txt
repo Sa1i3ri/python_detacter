@@ -6,6 +6,8 @@ content     b'"""\nRecord Arrays\n=============\nRecord ar...
 methods                          [fromarrays, _setfieldnames]
 lines                                              [179, 536]
 
+179 536 
+
 """
 Record Arrays
 =============

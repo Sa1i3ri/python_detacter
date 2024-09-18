@@ -6,6 +6,8 @@ content     b'import json\nimport logging\nimport os\nimpo...
 methods                      [handle_parsed_args, get_parser]
 lines       [99, 100, 101, 102, 103, 104, 129, 130, 131, 1...
 
+99 100 101 102 103 104 129 130 131 132 133 134 135 
+
 import json
 import logging
 import os

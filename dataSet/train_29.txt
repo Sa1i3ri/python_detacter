@@ -6,6 +6,8 @@ content     b'import os\nfrom .helpers import parse_boolea...
 methods                                                    []
 lines                                        [46, 47, 48, 71]
 
+46 47 48 71 
+
 import os
 from .helpers import parse_boolean
 

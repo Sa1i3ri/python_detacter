@@ -6,6 +6,8 @@ content     b'import urllib\nfrom datetime import datetime...
 methods     [_restore_taskset, _get_task_meta_for, _save_t...
 lines                              [6, 7, 18, 38, 49, 66, 77]
 
+6 7 18 38 49 66 77 
+
 import urllib
 from datetime import datetime
 

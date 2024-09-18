@@ -6,6 +6,8 @@ content     b'import collections.abc\nimport copy\nimport ...
 methods                                         [get_choices]
 lines                                    [828, 829, 830, 832]
 
+828 829 830 832 
+
 import collections.abc
 import copy
 import datetime

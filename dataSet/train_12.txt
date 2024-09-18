@@ -6,6 +6,8 @@ content     b'#!/usr/bin/env python3\nimport sys\n\nimport...
 methods                                       [generate_code]
 lines                                              [162, 168]
 
+162 168 
+
 #!/usr/bin/env python3
 import sys
 
