@@ -1,0 +1,15 @@
+Overview:
+The program accepts user input for age and prints whether it is valid.
+
+Sub-components:
+S1: Read user input using input().
+S2: Convert the input to an integer using int().
+S3: Check if the age is within the range 1 to 149.
+
+Analysis:
+A-S1: The input() function directly accepts raw user input, which could be non-numeric.
+A-S2: The int() function does not handle invalid input gracefully, leading to program crashes.
+A-S3: The range check is applied, but invalid input outside the range is not prevented before processing.
+
+Decision:
+The vulnerable code does not validate the input type and range properly, making it prone to crashes and incorrect data processing.

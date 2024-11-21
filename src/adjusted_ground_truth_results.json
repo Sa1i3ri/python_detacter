@@ -1,0 +1,302 @@
+[
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-190/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-190/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-190/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-190/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-190/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-190/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-20/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-20/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-20/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-20/P_1.py",
+        "label": "Yes",
+        "reasoning": "The file 'P_1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-20/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-20/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-209/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-209/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-209/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-209/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-209/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-209/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-22/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-22/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-22/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-22/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-22/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-22/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-327/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-327/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-327/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-327/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-327/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-327/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-400/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-400/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-400/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-400/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-400/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-400/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-502/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-502/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-502/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-502/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-502/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-502/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-732/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-732/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-732/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-732/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-732/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-732/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-79/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-79/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-79/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-79/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-79/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-79/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-89/1.py",
+        "label": "Yes",
+        "reasoning": "The file '1.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-89/2.py",
+        "label": "Yes",
+        "reasoning": "The file '2.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-89/3.py",
+        "label": "Yes",
+        "reasoning": "The file '3.py' contains a security vulnerability. It represents an unpatched version that may allow exploits such as unauthorized access, path traversal, or code injection."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-89/p_1.py",
+        "label": "No",
+        "reasoning": "The file 'p_1.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-89/p_2.py",
+        "label": "No",
+        "reasoning": "The file 'p_2.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    },
+    {
+        "file": "/mnt/data/extracted_dataset/dataset/CWE-89/p_3.py",
+        "label": "No",
+        "reasoning": "The file 'p_3.py' does not contain security vulnerabilities. It represents a patched version where the issues present in the original code have been mitigated."
+    }
+]

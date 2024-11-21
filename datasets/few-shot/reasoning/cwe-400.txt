@@ -1,0 +1,1 @@
+The vulnerable code does not restrict the size of the input or the number of repetitions in processing. An attacker could input a very large string or a highly repetitive pattern to cause excessive memory allocation or CPU usage. This can lead to denial of service (DoS) by exhausting system resources, such as memory or processing power.

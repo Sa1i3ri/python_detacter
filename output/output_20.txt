@@ -1,1 +1,0 @@
-To help identify potential bugs, could you specify any particular issues you've encountered while running the program, or are you looking for general code quality concerns?

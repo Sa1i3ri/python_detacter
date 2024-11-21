@@ -1,0 +1,1 @@
+The vulnerable code directly deserializes user-provided input using Python’s pickle module. This is dangerous because pickle can execute arbitrary Python code during deserialization. An attacker could inject malicious payloads into the serialized data to execute commands on the server, such as deleting files or opening backdoors.

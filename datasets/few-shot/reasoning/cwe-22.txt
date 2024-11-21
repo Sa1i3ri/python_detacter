@@ -1,0 +1,1 @@
+The function accepts a file_name as input and concatenates it with base_dir to form the file_path. However, there is no check to ensure the file_name does not contain sequences like ../. As a result, the program may open files outside the designated base_dir. For instance, providing ../etc/passwd could lead to unauthorized access to sensitive system files.

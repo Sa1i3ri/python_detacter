@@ -1,0 +1,1 @@
+The vulnerable code uses MD5, a cryptographic hash algorithm known to be broken and insecure due to vulnerabilities such as collision attacks. An attacker can exploit these weaknesses to produce the same hash for two different inputs, potentially bypassing authentication systems. MD5 is also highly susceptible to brute force attacks due to its lack of computational complexity.

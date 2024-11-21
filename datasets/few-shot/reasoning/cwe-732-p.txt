@@ -1,0 +1,1 @@
+The patched code explicitly sets restrictive permissions for the file using os.chmod. By applying permissions that allow only the file owner to read and write (stat.S_IRUSR | stat.S_IWUSR), it ensures sensitive data is not accessible to unauthorized users, mitigating the risk of information exposure.

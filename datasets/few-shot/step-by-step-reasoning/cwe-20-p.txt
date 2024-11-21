@@ -1,0 +1,15 @@
+Overview:
+The program accepts user input for age, validates it, and prints whether it is valid.
+
+Sub-components:
+S1: Read user input using input().
+S2: Convert the input to an integer using int() inside a try-except block.
+S3: Validate the age range using the helper function is_valid_age.
+
+Analysis:
+A-S1: The input() function accepts raw user input.
+A-S2: The int() function is wrapped in a try-except block, which prevents crashes for non-numeric input.
+A-S3: The helper function is_valid_age ensures the age is within the range of 1 to 149 before proceeding.
+
+Decision:
+The patched code validates both input type and range, ensuring robustness and correctness.

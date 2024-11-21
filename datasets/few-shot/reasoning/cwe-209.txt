@@ -1,0 +1,1 @@
+The vulnerable code catches exceptions and directly includes the exception message in the response to the user. This practice exposes internal details, such as database errors, stack traces, or query structures, which could be exploited by attackers. For example, an attacker might deduce database table names or injection points based on the error message.

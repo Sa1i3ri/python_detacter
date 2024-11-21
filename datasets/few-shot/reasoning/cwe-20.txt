@@ -1,0 +1,4 @@
+The vulnerable code directly accepts user input without any validation to check if the input is an integer or falls within the acceptable range of 1 to 149. This leads to two primary issues:
+
+1.If the user inputs a non-numeric value, the int() function will raise a ValueError and crash the program.
+2.If the user inputs a value outside the acceptable range, the program will print an invalid message but does not prevent further issues or ensure data correctness.

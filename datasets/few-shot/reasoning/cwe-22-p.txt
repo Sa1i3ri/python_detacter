@@ -1,0 +1,1 @@
+The function accepts a file_name and constructs a full path by combining it with base_dir. Before proceeding, the code resolves the absolute path of file_path and ensures it starts with the base_dir. This validation guarantees that the file is located within the designated directory and prevents unauthorized access to files outside of base_dir.

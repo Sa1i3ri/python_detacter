@@ -1,0 +1,4 @@
+The patched code introduces two layers of validation:
+
+1.It wraps the int() conversion in a try-except block to handle non-numeric input gracefully and avoid program crashes.
+2.It checks the validity of the numeric input using a helper function is_valid_age to ensure the input falls within the acceptable range of 1 to 149. This ensures the program operates safely with valid data only.
