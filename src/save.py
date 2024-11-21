@@ -50,9 +50,9 @@ if __name__ == "__main__":
     embedding_generator = Embedding()
 
     embedding_generator.prepare(
-        base_url="https://api.gptsapi.net/v1",
-        api_key="sk-LH31d908ec18dfea53eec6d9bc5f51d8ded32665b02ledso",
-        model="text-embeddings-3-large"
+        base_url="",
+        api_key="",
+        model=""
     )
 
     cwes=['CWE-79','CWE-89']
