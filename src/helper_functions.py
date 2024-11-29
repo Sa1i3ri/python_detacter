@@ -3,6 +3,7 @@ import json
 import time
 import numpy as np
 import openai
+openai.api_version = "2024-08-01-preview"
 from statistics import mode
 from rouge_score import rouge_scorer
 from pydantic import BaseModel, Field
@@ -61,7 +62,7 @@ class HelperFunctions:
         返回:
             dict 或 None: 如果调用成功，返回 GPT 模型的响应内容；否则返回 None。
         """
-        done, itr = False, 5  # 初始化完成标志为 False 和最大重试次数为 5
+        done, itr = False, 50  # 初始化完成标志为 False 和最大重试次数为 50
         while not done and itr:  # 当未完成且重试次数未用完时，继续执行
             try:
                 # 检查并修复文本边界情况（例如单词过长的问题）
@@ -118,7 +119,7 @@ class HelperFunctions:
         text = 'Text: """\n' + content + '\n"""\n' + q  # 拼接完整问题内容
 
         # 初始化完成标志和重试次数
-        done, itr = False, 5
+        done, itr = False, 50
         while not done and itr:  # 如果未完成且仍有重试次数，则继续
             try:
                 # 检查并修复文本中的边界情况（如超长单词）
@@ -218,7 +219,7 @@ class HelperFunctions:
         ).format(self.cwes[cwe], self.cwes[cwe])  # 根据 CWE 编号构造规则
 
         # 初始化完成标志和重试次数
-        done, itr = False, 5
+        done, itr = False, 50
 
         while not done and itr:  # 如果未完成且仍有重试次数，则继续
             try:
@@ -337,7 +338,7 @@ class HelperFunctions:
             float: 预测描述和真实答案之间的余弦相似度。如果失败，返回 None。
         """
         # 初始化完成标志和最大重试次数
-        done, itr = False, 5
+        done, itr = False, 50
         while not done and itr:  # 如果未完成且仍有重试次数，则继续
             try:
                 # 调用 GPT-3.5 大型嵌入模型获取 `reason` 的向量表示
@@ -389,7 +390,7 @@ class HelperFunctions:
                 + '\n"""'
         )
         # 初始化重试次数
-        itr = 5
+        itr = 50
         while itr:  # 如果仍有重试次数，则继续尝试
             try:
                 # 调用 GPT API 生成响应
@@ -719,3 +720,92 @@ class HelperFunctions:
         best_prompts_json = self.get_model_best_prompts(metric_data, model, zs_to, zs_ro, fs_to, fs_ro)
 
         return best_prompts_json
+
+    def prompt_addResult(self,**kwargs):
+        input_path = kwargs['input_path']
+        result_path = kwargs['result_path']
+        # 检查结果文件是否存在
+        try:
+            with open(input_path, "r", encoding='utf-8') as file:
+                file_contents = file.read()
+                input = json.loads(file_contents) if file_contents else {}
+            with open(result_path, "r", encoding='utf-8') as file:
+                file_contents = file.read()
+                results = json.loads(file_contents) if file_contents else {}
+        except FileNotFoundError:
+            print("文件未找到。")
+            results = {}
+        except json.JSONDecodeError:
+            print("无效的 JSON。")
+            results = {}
+
+        # 遍历 JSON 结构，添加 reason_result
+        for prompt, temp_data in input.items():
+            results[prompt]={}
+            for temp, cwe_data in temp_data.items():
+                results[prompt][temp]={}
+                for cwe, files in cwe_data.items():
+                    results[prompt][temp][cwe]={}
+                    for file_name, file_data in files.items():
+                        results[prompt][temp][cwe][file_name]={}
+                        reason_correct_num=0
+                        pred_correct_num=0
+                        for idx, details in file_data.items():
+                            rouge = details.get("rouge", 0)
+                            cos_sim = details.get("cos_sim", 0)
+                            gpt_eval = details.get("gpt_eval", "no")
+                            reason_correct_num += self.handle_reason(rouge, cos_sim, gpt_eval)
+                            if (file_name[0]=='p' and details['pred']=='no') or (file_name[0]!='p' and details['pred']=='yes'):
+                                pred_correct_num+=1
+                        results[prompt][temp][cwe][file_name]['pred_correct_num']=pred_correct_num
+                        results[prompt][temp][cwe][file_name]['reason_correct_num']=reason_correct_num
+
+
+
+        # 将结果写回 JSON 文件
+        open(result_path, "w").write(json.dumps(results, indent=4, sort_keys=True))
+
+        print("Added reason_result to the JSON data.")
+
+    def determinism_addResult(self,**kwargs):
+        input_path = kwargs['input_path']
+        result_path = kwargs['result_path']
+        # 检查结果文件是否存在
+        try:
+            with open(input_path, "r", encoding='utf-8') as file:
+                file_contents = file.read()
+                input = json.loads(file_contents) if file_contents else {}
+            with open(result_path, "r", encoding='utf-8') as file:
+                file_contents = file.read()
+                results = json.loads(file_contents) if file_contents else {}
+        except FileNotFoundError:
+            print("文件未找到。")
+            results = {}
+        except json.JSONDecodeError:
+            print("无效的 JSON。")
+            results = {}
+
+        for prompt, temp_data in input.items():
+            results[prompt]={}
+            for temp, cwe_data in temp_data.items():
+                results[prompt][temp]={}
+                for cwe, files in cwe_data.items():
+                    results[prompt][temp][cwe]={}
+                    for file_name, file_data in files.items():
+                        results[prompt][temp][cwe][file_name]={}
+                        yes=0
+                        no=0
+                        for idx, details in file_data.items():
+                            pred = details['pred']
+                            if pred=='yes':
+                                yes+=1
+                            elif pred=='no':
+                                no+=1
+
+                        results[prompt][temp][cwe][file_name]['yes']=yes
+                        results[prompt][temp][cwe][file_name]['no']=no
+
+        # 将结果写回 JSON 文件
+        open(result_path, "w").write(json.dumps(results, indent=4, sort_keys=True))
+
+        print("Added reason_result to the JSON data.")

@@ -1,0 +1,1 @@
+The `/tmp/uploads` directory is created with permissions explicitly set to `0o700`, ensuring that only the owner has read, write, and execute permissions. This approach protects the directory contents from unauthorized access or tampering and follows best practices for securing sensitive directories.

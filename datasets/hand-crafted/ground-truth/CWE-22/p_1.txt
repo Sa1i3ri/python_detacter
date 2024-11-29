@@ -1,0 +1,1 @@
+The filename is partially validated to check for .., /, and \, and the filepath is verified to start with the absolute path of /var/logs/. While these checks reduce the risk of path traversal, edge cases like URL encoding or special character sequences might bypass the validation, potentially exposing sensitive files if not handled comprehensively.

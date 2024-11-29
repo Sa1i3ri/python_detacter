@@ -2,6 +2,8 @@ import openai, time
 from openai import OpenAI, api_key
 from src.adapter import LLMAdapter
 
+openai.api_version = "2024-08-01-preview"
+
 class GPTAdapter(LLMAdapter):
     def __init__(self, temp=0.0):
         super().__init__()
@@ -40,7 +42,7 @@ class GPTAdapter(LLMAdapter):
         msgs.append({"role": "user", "content": kwargs['text']})
 
         # send request
-        itr = 5
+        itr = 50
         while itr:
             try:
                 response = self.model_client.chat.completions.create(
@@ -59,16 +61,19 @@ class GPTAdapter(LLMAdapter):
 
 if __name__ == "__main__":
     adapter = GPTAdapter()
-    base_url = 'https://api.gptsapi.net/v1',
-    api_key='sk-LH31d908ec18dfea53eec6d9bc5f51d8ded32665b02ledso',
-    model='gpt-4',
+    base_url = ''
+    api_key=''
+    model=''
     adapter.prepare(
         base_url=base_url,
         api_key=api_key,
         model=model
     )
-    adapter.run_all(
-        base_url=base_url,
-        api_key=api_key,
-        model=model
-    )
+    # adapter.run_all(
+    #     base_url=base_url,
+    #     api_key=api_key,
+    #     model=model
+    # )
+    #adapter.get_best_prompts(model=model,)
+    #adapter.addResult(model=model)
+    adapter.determinism_add_result(model=model)

@@ -1,0 +1,1 @@
+The ip_address is directly concatenated into the command string, which is passed to subprocess.check_output with shell=True. A user can inject malicious commands through the ip_address parameter, enabling remote code execution and potentially compromising the server. This leads to a command injection vulnerability.

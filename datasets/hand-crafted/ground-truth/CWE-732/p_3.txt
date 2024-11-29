@@ -1,0 +1,1 @@
+The `examples.db` database is created without explicitly restricting file permissions. If the default file permissions are too permissive, unauthorized users could access or modify the database, potentially exposing sensitive information.

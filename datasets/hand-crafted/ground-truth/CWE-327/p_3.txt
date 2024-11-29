@@ -1,0 +1,1 @@
+The `generate_key` function securely generates a cryptographic key using `secrets.token_bytes`, which is a cryptographically secure random number generator. This approach ensures the key is unpredictable and safe for cryptographic purposes, adhering to best practices.

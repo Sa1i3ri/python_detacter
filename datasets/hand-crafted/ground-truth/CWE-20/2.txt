@@ -1,0 +1,1 @@
+The file.filename is directly concatenated with the server directory path /uploads/ using os.path.join without validating or sanitizing the file name. A user can supply a malicious file name containing ../ to traverse directories and overwrite arbitrary files on the server, leading to a path traversal vulnerability.

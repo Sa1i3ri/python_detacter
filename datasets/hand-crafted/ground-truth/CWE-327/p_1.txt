@@ -1,0 +1,1 @@
+The `store_password` function securely hashes the password using the Argon2 algorithm, which is considered one of the most secure and recommended password hashing algorithms. It provides protection against brute-force and side-channel attacks. This implementation is robust and follows best practices for password storage.

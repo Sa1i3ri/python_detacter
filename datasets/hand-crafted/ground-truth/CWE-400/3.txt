@@ -1,0 +1,1 @@
+The `num_threads` input is converted directly to an integer without validation. A user can input an excessively large number, leading to resource exhaustion and potentially causing a denial-of-service attack. Input validation should be implemented to ensure the number of threads is within a safe and reasonable range.

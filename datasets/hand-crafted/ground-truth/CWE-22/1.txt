@@ -1,0 +1,1 @@
+The filename is directly concatenated with the directory path /var/logs/ to form filepath without validation or sanitization. A user can exploit this by providing malicious input containing ../ to perform a path traversal attack, potentially accessing unauthorized files outside the intended directory.

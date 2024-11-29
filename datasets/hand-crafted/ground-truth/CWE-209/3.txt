@@ -1,0 +1,7 @@
+The application directly compares user-provided credentials against a hardcoded dictionary. This introduces several vulnerabilities:
+
+1. **Hardcoded Credentials**: Storing sensitive information like passwords in the source code is insecure and exposes the application to compromise if the code is accessed.
+
+2. **Information Disclosure**: Error messages disclose whether a username exists, enabling attackers to enumerate valid usernames for further attacks.
+
+3. **No Password Hashing**: Passwords are stored in plaintext instead of being hashed, increasing the risk of exposure if the application is compromised.

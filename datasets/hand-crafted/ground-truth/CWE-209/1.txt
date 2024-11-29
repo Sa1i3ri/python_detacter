@@ -1,0 +1,1 @@
+The database connection parameters, including the plaintext password, are hardcoded into the application, which poses a security risk if the source code is exposed. Additionally, returning full error details in the response can leak sensitive information about the database configuration, potentially aiding attackers in exploiting vulnerabilities.

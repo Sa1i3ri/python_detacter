@@ -1,0 +1,1 @@
+The `username` and `password` are directly compared against a hardcoded dictionary without hashing or secure storage. Hardcoding passwords exposes sensitive information if the code is accessed. Additionally, the error messages reveal whether a username exists, enabling user enumeration attacks.

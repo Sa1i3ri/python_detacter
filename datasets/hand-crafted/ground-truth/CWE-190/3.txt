@@ -1,0 +1,1 @@
+The `offset` and `size` inputs are converted to integers without validation, allowing a user to provide negative or excessively large values. Negative offsets could lead to undefined behavior, and large sizes could cause excessive memory usage, potentially leading to denial-of-service vulnerabilities or improper file reads.

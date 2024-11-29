@@ -1,0 +1,1 @@
+The filename is directly concatenated with the directory path /uploads/ to form filepath without validation. A user can supply malicious input containing ../ to perform a path traversal attack, potentially deleting unauthorized files outside the intended directory.

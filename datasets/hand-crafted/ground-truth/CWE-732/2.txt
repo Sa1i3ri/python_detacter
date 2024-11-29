@@ -1,0 +1,1 @@
+The `/tmp/uploads` directory is created with the default system permissions, which may allow unauthorized users or processes to access or modify its contents. Without explicitly setting restrictive permissions, this can lead to unauthorized file access or tampering.

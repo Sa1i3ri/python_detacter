@@ -1,0 +1,1 @@
+The `sensitive_data.txt` file is created without setting restrictive permissions, potentially exposing sensitive information to unauthorized users or processes. If the default file permissions are too permissive, this can lead to information leakage.

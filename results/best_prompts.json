@@ -1,0 +1,10 @@
+{
+    "gpt-4": {
+        "FR": "promptD4",
+        "FS": "promptR6",
+        "FT": "promptR6",
+        "ZR": "promptS4",
+        "ZS": "promptS4",
+        "ZT": "promptD1"
+    }
+}

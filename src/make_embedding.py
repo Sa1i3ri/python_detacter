@@ -52,10 +52,10 @@ if __name__ == "__main__":
     embedding_generator.prepare(
         base_url="",
         api_key="",
-        model=""
+        model="text-embedding-ada-002"
     )
 
-    cwes=['CWE-79','CWE-89']
+    cwes=['CWE-20','CWE-22','CWE-190','CWE-209','CWE-327','CWE-400','CWE-502','CWE-732']
     name1=['1','2','3','p_1','p_2','p_3']
     for cwe in cwes:
         for name in name1:

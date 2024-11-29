@@ -1,0 +1,1 @@
+The `password` is hashed using the MD5 algorithm, which is considered cryptographically insecure due to vulnerabilities such as collision attacks. Using MD5 for password storage can lead to security breaches if the password hashes are cracked. A more secure algorithm, like bcrypt, Argon2, or PBKDF2, should be used for hashing passwords.

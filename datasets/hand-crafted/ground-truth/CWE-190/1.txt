@@ -1,0 +1,1 @@
+The `user_input` is converted to an integer without validation, allowing a user to input negative or excessively large values. This can cause memory allocation issues, such as negative sizes leading to undefined behavior or large sizes causing memory exhaustion, resulting in a potential denial-of-service vulnerability.

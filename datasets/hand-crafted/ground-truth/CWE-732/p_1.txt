@@ -1,0 +1,1 @@
+The `sensitive_data.txt` file is created and its permissions are explicitly set to `0o600`, ensuring that only the owner has read and write access. This approach effectively protects the sensitive information from unauthorized access and adheres to best practices for secure file handling.

@@ -1,0 +1,1 @@
+The `user_input` is converted directly to an integer without validation. A user can input excessively large values, potentially causing the program to enter a prolonged or infinite loop, leading to a denial-of-service vulnerability.

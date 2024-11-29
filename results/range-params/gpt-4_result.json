@@ -1,0 +1,136 @@
+{
+    "promptS4": {
+        "0.0": {
+            "cwe-79": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 9
+                },
+                "p_3.py": {
+                    "pred_correct_num": 9,
+                    "reason_correct_num": 5
+                }
+            },
+            "cwe-89": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 10
+                },
+                "p_3.py": {
+                    "pred_correct_num": 0,
+                    "reason_correct_num": 4
+                }
+            }
+        },
+        "0.2": {
+            "cwe-79": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 9
+                },
+                "p_3.py": {
+                    "pred_correct_num": 8,
+                    "reason_correct_num": 5
+                }
+            },
+            "cwe-89": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 10
+                },
+                "p_3.py": {
+                    "pred_correct_num": 0,
+                    "reason_correct_num": 1
+                }
+            }
+        },
+        "0.25": {
+            "cwe-79": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 9
+                },
+                "p_3.py": {
+                    "pred_correct_num": 8,
+                    "reason_correct_num": 5
+                }
+            },
+            "cwe-89": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 10
+                },
+                "p_3.py": {
+                    "pred_correct_num": 0,
+                    "reason_correct_num": 1
+                }
+            }
+        },
+        "0.5": {
+            "cwe-79": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 9
+                },
+                "p_3.py": {
+                    "pred_correct_num": 9,
+                    "reason_correct_num": 3
+                }
+            },
+            "cwe-89": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 10
+                },
+                "p_3.py": {
+                    "pred_correct_num": 0,
+                    "reason_correct_num": 4
+                }
+            }
+        },
+        "0.75": {
+            "cwe-79": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 9
+                },
+                "p_3.py": {
+                    "pred_correct_num": 8,
+                    "reason_correct_num": 4
+                }
+            },
+            "cwe-89": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 10
+                },
+                "p_3.py": {
+                    "pred_correct_num": 0,
+                    "reason_correct_num": 4
+                }
+            }
+        },
+        "1.0": {
+            "cwe-79": {
+                "3.py": {
+                    "pred_correct_num": 9,
+                    "reason_correct_num": 8
+                },
+                "p_3.py": {
+                    "pred_correct_num": 8,
+                    "reason_correct_num": 1
+                }
+            },
+            "cwe-89": {
+                "3.py": {
+                    "pred_correct_num": 10,
+                    "reason_correct_num": 10
+                },
+                "p_3.py": {
+                    "pred_correct_num": 1,
+                    "reason_correct_num": 2
+                }
+            }
+        }
+    }
+}

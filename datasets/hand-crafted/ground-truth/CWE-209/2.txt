@@ -1,0 +1,1 @@
+The `filename` is taken directly from user input without any validation or sanitization. This allows an attacker to provide a malicious path, such as `../../etc/passwd`, to perform a path traversal attack and read sensitive files on the server, leading to a potential information disclosure vulnerability.

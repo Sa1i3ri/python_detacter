@@ -1,0 +1,1 @@
+The `generate_key` function uses the `random.randint` function, which is not cryptographically secure, to generate a key. This makes the key predictable and vulnerable to attacks. A cryptographically secure random number generator, such as `os.urandom` or `secrets.token_bytes`, should be used to ensure the key's security.

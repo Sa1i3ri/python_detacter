@@ -1,0 +1,1 @@
+The `encrypt_data` function uses AES encryption in ECB mode, which is insecure for most applications due to its lack of semantic security. ECB mode encrypts identical plaintext blocks into identical ciphertext blocks, revealing patterns in the data. Using a secure mode like AES in CBC or GCM mode with proper initialization vectors (IVs) would mitigate this vulnerability.

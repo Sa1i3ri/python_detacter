@@ -1,0 +1,1 @@
+The file.filename is sanitized with os.path.basename and checked for allowed extensions. However, it may not handle edge cases like double extensions (file.txt.jpg) or disguised malicious filenames, potentially bypassing restrictions and leading to unauthorized file uploads.

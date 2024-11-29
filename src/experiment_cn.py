@@ -2,7 +2,7 @@ import os
 import json
 import pickle
 
-from openai import OpenAI
+from openai import OpenAI, base_url
 from tqdm import tqdm
 import openai
 
@@ -242,7 +242,9 @@ class ExperimentRunner:
                 },
             }
         '''
-        self.gpt_client = OpenAI(api_key=kwargs['api_key'])
+        self.gpt_client = OpenAI(
+            api_key=kwargs['api_key'],
+            base_url=kwargs['base_url'])
         self.temp = kwargs['temp']
         model = kwargs['model']
         dataset_path = kwargs['dataset_path']
@@ -256,7 +258,8 @@ class ExperimentRunner:
         try:
             print("\n正在为模型 {} 运行实验".format(model))
             # 遍历所有目录 (CWEs)
-            for dir in tqdm(os.listdir(os.path.join(dataset_path, 'dataset'))):
+            #for dir in tqdm(os.listdir(os.path.join(dataset_path, 'dataset'))):
+            for dir in ['CWE-209']:
                 # 检查目录名称是否有效
                 cwe = dir.lower()
                 if cwe not in self.cwes:
@@ -401,64 +404,103 @@ class ExperimentRunner:
         print("确定性响应实验完成！！")
         print("#######################################\n")
 
-        # ### 参数范围实验
-        # print("\n#######################################")
-        # print("参数范围实验开始！！")
-        # print("#######################################\n")
-        #
-        # # 创建目录以存储结果
-        # range_param_result_path = os.path.join(result_path, 'range-params')
-        # os.makedirs(range_param_result_path, exist_ok=True)
-        # # 为实验选择的文件、提示语和温度范围
-        # cwe_files = [("cwe-787", "3.c"), ("cwe-787", "p_3.c"), ("cwe-89", "3.py"), ("cwe-89", "p_3.py")]
-        # prompt = 'promptS4'
-        # temps = [0.2, 0.0, 0.25, 0.5, 0.75, 1.0]
-        # for temp in temps:
-        #     self.run_temp_test(
-        #         api_key=api_key,
-        #         temp=temp,
-        #         model=model,
-        #         k=10,
-        #         do_reason=True,
-        #         do_extract=True,
-        #         cwe_files=cwe_files,
-        #         prompt=prompt,
-        #         dataset_path=os.path.join(dataset_path, 'hand-crafted'),
-        #         result_path=range_param_result_path
-        #     )
-        # print("\n#######################################")
-        # print("参数范围实验完成！！")
-        # print("#######################################\n")
-        #
-        # ### 提示语实验
-        # print("\n#######################################")
-        # print("提示语实验开始！！")
-        # print("#######################################\n")
-        #
-        # # 创建目录以存储结果
-        # prompts_result_path = os.path.join(result_path, 'prompts')
-        # os.makedirs(prompts_result_path, exist_ok=True)
-        # # 在所有提示语上运行实验
-        # self.run_prompts_experiments(
-        #     api_key=api_key,
-        #     temp=0.0,
-        #     model=model,
-        #     dataset_path=os.path.join(dataset_path, 'hand-crafted'),
-        #     result_path=prompts_result_path
-        # )
-        # print("\n#######################################")
-        # print("提示语实验完成！！")
-        # print("#######################################\n")
-        #
-        # # 计算最佳提示语
-        # best_prompts_path = os.path.join(result_path, 'best_prompts.json')
-        # if not os.path.isfile(best_prompts_path):
-        #     best_prompts_loaded = {}
-        # else:
-        #     best_prompts_loaded = json.loads(open(best_prompts_path, "r", encoding='utf-8').read())
-        # best_prompts_loaded[model] = self.find_best_prompts(result_path=prompts_result_path, model=model)
-        # open(os.path.join(result_path, 'best_prompts.json'), "w").write(
-        #     json.dumps(best_prompts_loaded, indent=4, sort_keys=True))
+
+        ## 参数范围实验
+        print("\n#######################################")
+        print("参数范围实验开始！！")
+        print("#######################################\n")
+
+        # 创建目录以存储结果
+        range_param_result_path = os.path.join(result_path, 'range-params')
+        os.makedirs(range_param_result_path, exist_ok=True)
+        # 为实验选择的文件、提示语和温度范围
+        cwe_files = [("cwe-79", "3.py"), ("cwe-79", "p_3.py"), ("cwe-89", "3.py"), ("cwe-89", "p_3.py")]
+        prompt = 'promptS4'
+        temps = [0.2, 0.0, 0.25, 0.5, 0.75, 1.0]
+        for temp in temps:
+            self.run_temp_test(
+                base_url=base_url,
+                api_key=api_key,
+                temp=temp,
+                model=model,
+                k=10,
+                do_reason=True,
+                do_extract=True,
+                cwe_files=cwe_files,
+                prompt=prompt,
+                dataset_path=os.path.join(dataset_path, 'hand-crafted'),
+                result_path=range_param_result_path
+            )
+        print("\n#######################################")
+        print("参数范围实验完成！！")
+        print("#######################################\n")
+
+        ### 提示语实验
+        print("\n#######################################")
+        print("提示语实验开始！！")
+        print("#######################################\n")
+
+        # 创建目录以存储结果
+        prompts_result_path = os.path.join(result_path, 'prompts')
+        os.makedirs(prompts_result_path, exist_ok=True)
+        # 在所有提示语上运行实验
+        self.run_prompts_experiments(
+            base_url=base_url,
+            api_key=api_key,
+            temp=0.0,
+            model=model,
+            dataset_path=os.path.join(dataset_path, 'hand-crafted'),
+            result_path=prompts_result_path
+        )
+        print("\n#######################################")
+        print("提示语实验完成！！")
+        print("#######################################\n")
+
+        # 计算最佳提示语
+        best_prompts_path = os.path.join(result_path, 'best_prompts.json')
+        if not os.path.isfile(best_prompts_path):
+            best_prompts_loaded = {}
+        else:
+            best_prompts_loaded = json.loads(open(best_prompts_path, "r", encoding='utf-8').read())
+        best_prompts_loaded[model] = self.find_best_prompts(result_path=prompts_result_path, model=model)
+        open(os.path.join(result_path, 'best_prompts.json'), "w").write(
+            json.dumps(best_prompts_loaded, indent=4, sort_keys=True))
 
 
 
+    def get_best_prompts(self, **kwargs):
+        # 创建 `results` 目录
+        result_path = os.path.join(os.path.dirname(__file__), '..', 'results')
+        os.makedirs(result_path, exist_ok=True)
+
+        # 创建目录以存储结果
+        prompts_result_path = os.path.join(result_path, 'prompts')
+        os.makedirs(prompts_result_path, exist_ok=True)
+
+        model = kwargs['model']
+
+        #计算最佳提示语
+        best_prompts_path = os.path.join(result_path, 'best_prompts.json')
+        if not os.path.isfile(best_prompts_path):
+            best_prompts_loaded = {}
+        else:
+            best_prompts_loaded = json.loads(open(best_prompts_path, "r", encoding='utf-8').read())
+        best_prompts_loaded[model] = self.find_best_prompts(result_path=prompts_result_path, model=model)
+        open(os.path.join(result_path, 'best_prompts.json'), "w").write(
+            json.dumps(best_prompts_loaded, indent=4, sort_keys=True))
+
+    def prompt_add_result(self,**kwargs):
+        model = kwargs['model']
+        result_path = os.path.join(os.path.dirname(__file__), '..', 'results')
+        range_param_result_path = os.path.join(result_path, 'range-params')
+        input_full_path = os.path.join(range_param_result_path, model + ".json")
+        result_full_path = os.path.join(range_param_result_path, model+"_result" + ".json")
+        self.prompt_addResult(input_path=input_full_path,result_path =result_full_path )
+
+    def determinism_add_result(self,**kwargs):
+        model = kwargs['model']
+        result_path = os.path.join(os.path.dirname(__file__), '..', 'results')
+        det_res_result_path = os.path.join(result_path, 'determinism')
+        input_full_path = os.path.join(det_res_result_path, model + ".json")
+        result_full_path = os.path.join(det_res_result_path, model+"_result" + ".json")
+        self.determinism_addResult(input_path=input_full_path,result_path =result_full_path )
